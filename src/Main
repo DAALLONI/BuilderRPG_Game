@@ -1,0 +1,56 @@
+public class Main {
+
+    public static void main(String[] args) {
+
+        // ==========================================
+        // 1. PERSONAJE MÍNIMO
+        // ==========================================
+
+        Personaje personajeMinimo =
+                new PersonajeBuilder(
+                        "Thorin",
+                        "Enano",
+                        "Minero"
+                )
+                .build();
+
+
+        // ==========================================
+        // 2. PERSONAJE BIEN EQUIPADO
+        // ==========================================
+
+        Personaje personajeEquipado =
+                new PersonajeBuilder(
+                        "Legolas",
+                        "Elfo",
+                        "Arquero"
+                )
+                .conArma("Arco Largo")
+                .conArmadura("Armadura de Cuero Ligera")
+                .conMascota("Halcón")
+                .conNivel(10)
+                .agregarHabilidad("Disparo Triple")
+                .agregarHabilidad("Paso Silencioso")
+                .agregarHabilidad("Vista de Águila")
+                .build();
+
+
+        // ==========================================
+        // 3. PERSONAJE CON PLANTILLA
+        // ==========================================
+
+        Personaje personajePlantilla =
+                PersonajePredefinido.magoPorDefecto("Gandalf");
+
+
+        // ==========================================
+        // MOSTRAR PERSONAJES
+        // ==========================================
+
+        System.out.println(personajeMinimo);
+
+        System.out.println(personajeEquipado);
+
+        System.out.println(personajePlantilla);
+    }
+}
